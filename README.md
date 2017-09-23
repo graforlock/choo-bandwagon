@@ -1,5 +1,10 @@
+[![npm version](https://badge.fury.io/js/choo-bandwagon.svg)](https://badge.fury.io/js/choo-bandwagon)
+
 # choo-bandwagon
+
+:steam_locomotive::train::train::train::train::train:
 A webpack-based, heavily opinionated starter kit for a complete, isomorphic choo app.
+
 
 ## Usage:
 
