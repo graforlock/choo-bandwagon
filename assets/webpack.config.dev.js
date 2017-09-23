@@ -1,11 +1,10 @@
 const autoprefixer = require('autoprefixer')
 const path = require('path')
-const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 const webpack = require('webpack')
 
 module.exports = {
   entry: {
-    restaurant: [
+    bundle: [
       'webpack-dev-server/client?http://localhost:3001',
       'webpack/hot/only-dev-server',
       './styles/main.css',
@@ -15,7 +14,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'public/js'),
     filename: '[name].js',
-    publicPath: 'http://localhost:3001/javascripts'
+    publicPath: 'http://localhost:3001/js'
   },
   resolve: {
     extensions: ['.js']
@@ -29,7 +28,8 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /(\.css|\.scss)$/, loaders: [
+        test: /(\.css|\.scss)$/,
+        loaders: [
           {
             loader: 'style-loader'
           },
@@ -53,7 +53,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackHarddiskPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),

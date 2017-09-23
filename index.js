@@ -1,17 +1,13 @@
 #!/usr/bin/env node
 
 const async = require('async-collection')
-const checkPath = require('./lib/check-path')
-const copyAssets = require('./lib/copy')
 const { exec } = require('child_process')
 const format = require('format-json-stream')
 const fs = require('fs')
 const path = require('path')
 const pump = require('pump')
 
-const progress = require('./lib/progress')
-const npm = require('./lib/npm')
-const packager = require('./lib/packager')
+const lib = require('./lib')
 
 const cmd = process.argv[2]
 const name = process.argv[3]
@@ -27,24 +23,24 @@ if (!cmd || cmd !== 'new' || !name) {
 const dest = path.resolve('./', name)
 
 async.waterfall([
-  checkPath(dest),
-  copyAssets()
+  lib.checkPath(dest),
+  lib.copyAssets()
 ], (err) => {
   if (err) throw new Error(err)
 
   const packageDest = path.resolve(dest, 'package.json')
-  pump(packager(name), format(), fs.createWriteStream(packageDest),
+  pump(lib.packager(name), format(), fs.createWriteStream(packageDest),
     err => {
       if (err) throw new Error(err)
 
       console.log(`You just joined a bandwagon at ${dest}.`)
 
-      const bar = progress()
+      const bar = lib.progress()
       bar.start()
 
       const installer = Promise.all([
-        npm.install(dest),
-        npm.installDev(dest)
+        lib.npm.install(dest),
+        lib.npm.installDev(dest)
       ])
 
       installer

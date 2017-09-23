@@ -6,14 +6,14 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: {
-    restaurant: [
+    bundle: [
       './styles/main.css',
       './client/index.js'
     ]
   },
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'javascripts/[name].js'
+    filename: 'js/[name].js'
   },
   resolve: {
     extensions: ['.js']
@@ -33,8 +33,8 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].css',
-              context: './stylesheets/',
-              outputPath: 'stylesheets/',
+              context: './css/',
+              outputPath: 'css/',
               publicPath: 'public/'
             }
           },
