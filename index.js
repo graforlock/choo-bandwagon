@@ -17,7 +17,7 @@ exec('npm --version', (err, stdout, stderr) => {
 })
 
 if (!cmd || cmd !== 'new' || !name) {
-  throw new Error('Usage: bandwagon new my-cool-app')
+  throw new Error('Usage: choo-bandwagon new my-cool-app')
 }
 
 const dest = path.resolve('./', name)
@@ -33,7 +33,7 @@ async.waterfall([
     err => {
       if (err) throw new Error(err)
 
-      console.log(`You just joined a bandwagon at ${dest}.`)
+      console.log(`You just joined a choo bandwagon at ${dest}.`)
 
       const bar = lib.progress()
       bar.start()

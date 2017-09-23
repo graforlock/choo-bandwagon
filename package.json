@@ -1,5 +1,5 @@
 {
-  "name": "bandwagon",
+  "name": "choo-bandwagon",
   "version": "0.0.1",
   "description": "A webpack, heavily opinionated starter kit for a complete choo app.",
   "main": "index.js",
@@ -18,7 +18,7 @@
   "author": "Maciej Sitko",
   "license": "ISC",
   "bin": {
-    "bandwagon": "./index.js"
+    "choo-bandwagon": "./index.js"
   },
   "dependencies": {
     "async-collection": "^1.0.1",
