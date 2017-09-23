@@ -1,0 +1,29 @@
+{
+  "name": "bandwagon",
+  "version": "0.0.1",
+  "description": "A webpack, heavily opinionated starter kit for a complete choo app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "choo",
+    "express",
+    "webpack",
+    "es6",
+    "bandwagon",
+    "ssr",
+    "cool"
+  ],
+  "author": "Maciej Sitko",
+  "license": "ISC",
+  "bin": {
+    "bandwagon": "./index.js"
+  },
+  "dependencies": {
+    "async-collection": "^1.0.1",
+    "copy-dir": "^0.3.0",
+    "format-json-stream": "^0.1.5",
+    "pump": "^1.0.2"
+  }
+}
