@@ -1,3 +1,8 @@
+function isProd () {
+  return process.env.NODE_ENV === 'production';
+}
+
 exports.assetPath = () =>
-  process.env.NODE_ENV === 'production'
-  ? '' : 'http://localhost:3001'
+  isProd() ? '' : 'http://localhost:3001'
+
+exports.isProd = isProd
