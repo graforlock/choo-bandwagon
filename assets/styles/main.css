@@ -1,0 +1,27 @@
+body {
+  font-family: Lucida Console, monospace;
+  background: pink;
+  text-align: center;
+}
+
+h1 {
+  color: black;
+  border: 1px solid black;
+  display: inline-block;
+  padding: 10px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+p span {
+  color: black;
+}
+
+img {
+  height: 28px;
+}
