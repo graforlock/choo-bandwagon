@@ -13,3 +13,8 @@
 - `choo-bandwagon new my-cool-app`
 - `cd my-cool-app && npm start`
 - open [http://localhost:8080](http://localhost:8080)
+
+### Production build:
+
+- `npm run build`
+- `cross-env NODE_ENV=production node bin/www`
