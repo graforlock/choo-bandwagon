@@ -1,6 +1,6 @@
 
 # choo-bandwagon 
-[![npm version](https://badge.fury.io/js/choo-bandwagon.svg)](https://badge.fury.io/js/choo-bandwagon) 
+[![npm](https://img.shields.io/npm/v/choo-bandwagon.svg)](choo-bandwagon)
 
  A webpack-based, heavily opinionated starter kit for a complete, isomorphic choo app.
 
