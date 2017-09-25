@@ -1,6 +1,6 @@
 {
   "name": "choo-bandwagon",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A webpack-based, heavily opinionated starter kit for a complete, isomorphic choo app.",
   "main": "index.js",
   "scripts": {
