@@ -21,5 +21,6 @@ exports.devDeps = [
   'style-loader',
   'uglifyjs-webpack-plugin',
   'webpack',
+  'webpack-cli',
   'webpack-dev-server'
 ]
