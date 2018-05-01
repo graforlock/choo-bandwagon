@@ -16,8 +16,9 @@ server.get('/favicon.ico', (req, res) => {
 })
 
 server.use(function (request, response) {
-  const html = app.toString(request.originalUrl, {})
-  response.render('index', { helpers, html })
+  const initialState = {}
+  const html = app.toString(request.originalUrl, initialState)
+  response.render('index', { helpers, html, initialState})
 })
 
 const listener = server.listen(process.env.PORT, function () {

@@ -19,6 +19,7 @@ module.exports = {
     extensions: ['.js']
   },
   target: 'web',
+  mode: 'production',
   module: {
     rules: [
       {

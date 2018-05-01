@@ -9,6 +9,7 @@
 </head>
 <body>
   <%- html %>
+  <script>window.initialState = <%- JSON.stringify(initialState) %>;</script>
   <script src="<%= helpers.assetPath() %>/js/bundle.js" charset="utf-8"></script>
 </body>
 </html>

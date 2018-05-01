@@ -20,6 +20,7 @@ module.exports = {
     extensions: ['.js']
   },
   target: 'web',
+  mode: 'development',
   module: {
     rules: [
       {
