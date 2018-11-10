@@ -2,8 +2,10 @@ const app = require('../common/router')
 const express = require('express')
 const server = express()
 const path = require('path')
+const helpers = require('./helpers')
 
-const helpers = require('./helpers/ejs')
+if (helpers.isProd())
+    server.use(require('compression')())
 
 server.engine('html', require('ejs').renderFile)
 server.set('views', path.join(__dirname, 'views'))

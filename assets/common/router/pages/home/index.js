@@ -1,6 +1,6 @@
 const html = require('choo/html')
 
-const homeRoute = (state, emitter) => html`
+const home = (state, emitter) => html`
     <section>
       <h1>Hello, I am a home route!</h1>
       <br>
@@ -14,4 +14,4 @@ const homeRoute = (state, emitter) => html`
     </section>
   `
 
-module.exports = homeRoute
+module.exports = home

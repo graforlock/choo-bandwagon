@@ -1,17 +1,17 @@
 exports.deps = [
   'choo',
-  'choo-log',
-  'cross-env',
-  'dotenv',
-  'nanocomponent',
+  'express',
+  'compression',
   'ejs'
 ]
 
 exports.devDeps = [
   'autoprefixer',
-  'babel-core',
+  '@babel/core',
+  '@babel/preset-env',
   'babel-loader',
-  'babel-preset-es2015',
+  'dotenv',
+  'cross-env',
   'css-loader',
   'cssnano',
   'concurrently',
