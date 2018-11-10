@@ -2,7 +2,8 @@ exports.deps = [
   'choo',
   'express',
   'compression',
-  'ejs'
+  'ejs',
+  'cross-env'
 ]
 
 exports.devDeps = [
@@ -11,7 +12,6 @@ exports.devDeps = [
   '@babel/preset-env',
   'babel-loader',
   'dotenv',
-  'cross-env',
   'css-loader',
   'cssnano',
   'concurrently',
