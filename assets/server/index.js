@@ -4,8 +4,9 @@ const server = express()
 const path = require('path')
 const helpers = require('./helpers')
 
-if (helpers.isProd())
-    server.use(require('compression')())
+if (helpers.isProd()) {
+  server.use(require('compression')())
+}
 
 server.engine('html', require('ejs').renderFile)
 server.set('views', path.join(__dirname, 'views'))
